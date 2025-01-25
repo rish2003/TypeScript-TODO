@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 function ageCalc(user1, user2) {
     return user1.age + user2.age;
 }
@@ -16,3 +17,7 @@ const userProfile = {
     email: "raj@gmail.com",
 };
 displayUserProfile(user);
+function updateUser(updatedProps) {
+    //hit the db to update the user
+}
+updateUser({});

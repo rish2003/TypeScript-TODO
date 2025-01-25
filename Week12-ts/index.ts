@@ -64,13 +64,27 @@ interface UserPart3 {
 interface People {
   name: string;
   age: number;
-  greet3: () => string;
+  // greet3: () => string;
 }
 
-//creating an object of interface people
+//creating a class of interface people
 
 const person: People = {
   name: "John",
   age: 25,
-  greet3: () => "Hello",
+  // greet3: () => "Hello",
 };
+
+class Manager implements People {
+  name: string;
+  age: number;
+
+  constructor(name: string, age: number) {
+    this.name = name;
+    this.age = age;
+  }
+}
+
+
+//types and union and intersection in types
+

@@ -1,3 +1,5 @@
+import { StringLiteral } from "typescript";
+
 interface User {
   id: string;
   name: string;
@@ -42,3 +44,25 @@ const userProfile: UserProfile = {
 };
 
 displayUserProfile(user);
+
+//Partial -> Partial makes all properties of a type with the same properties, but each marked as optional.
+
+interface User3 {
+  id: string;
+  name: string;
+  age: string;
+  email: string;
+  password: string;
+}
+
+type UpdateProps = Pick<User3, "name" | "age" | "email">;
+
+type UpdatePropsOptional = Partial<UpdateProps>;
+
+function updateUser(updatedProps: UpdatePropsOptional) {
+  //hit the db to update the user
+}
+
+updateUser({});
+
+

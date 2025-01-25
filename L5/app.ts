@@ -17,3 +17,8 @@ function generateError(message: string, code: number): never {
 }
 const res = generateError("Internal server error", 500);
 console.log(res);
+
+
+
+// implementing a interface using class 
+
